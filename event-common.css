@@ -84,3 +84,47 @@ input {
   border-radius: 30px;
   width: 270px;
 }
+
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 0;
+  color: #fff;
+  background-color: rgb(68, 132, 189);
+  padding: 10px 16px;
+  border-radius: 30px;
+  position: relative;
+  transition: all 0.6;
+}
+
+button::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background-color: rgb(68, 132, 189);
+  border-radius: 30px;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+button:hover::before {
+  transform: scaleX(1.2) scaleY(1.4);
+  opacity: 0;
+}
+
+button:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.7);
+  transform: translateY(-5px);
+}
+
+button:active {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.7);
+  transform: translateY(-2px);
+}

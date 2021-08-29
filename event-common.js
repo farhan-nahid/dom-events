@@ -27,6 +27,9 @@ document
 document.getElementById("submit__value").addEventListener("click", function () {
   let input = document.getElementById("text__input");
   const p = document.getElementById("clicking__method");
+  if (input.value === "") {
+    return alert("Please Write Something");
+  }
   p.innerText = input.value;
   input.value = "";
   p.style.color = "green";
